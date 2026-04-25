@@ -130,10 +130,10 @@
     letter-spacing:0.1em;
   }
   .sec-title{
-    font-family:'Instrument Serif',serif;font-weight:400;
+    font-family:'Instrument Serif',serif;font-weight:600;
     font-size:clamp(40px,5.5vw,72px);line-height:1;letter-spacing:-0.02em;
   }
-  .sec-title em{font-style:italic;color:var(--fg-dim)}
+  .sec-title em{font-style:italic;color:var(--fg-dim);font-weight:400}
 
   /* --- ABOUT --- */
   .about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:96px}
@@ -356,6 +356,67 @@
   /* entrance */
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .8s ease, transform .8s ease}
   .reveal.in{opacity:1;transform:none}
+
+  /* --- ACCORDION FLOW --- */
+  .accord{margin-top:40px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .accord-trigger{
+    width:100%;display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;cursor:pointer;background:var(--bg-2);border:none;
+    font-family:'JetBrains Mono',monospace;font-size:11px;
+    color:var(--fg-dim);text-transform:uppercase;letter-spacing:0.13em;
+    transition:background .2s;text-align:left;
+  }
+  .accord-trigger:hover{background:var(--panel)}
+  .accord-tl{display:flex;align-items:center;gap:12px}
+  .accord-tl .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+  .accord-badge{font-size:10px;color:var(--fg-mute);letter-spacing:0.1em}
+  .accord-chevron{color:var(--fg-mute);font-size:18px;line-height:1;transition:transform .35s ease;flex-shrink:0}
+  .accord.open .accord-chevron{transform:rotate(180deg)}
+  .accord-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease;border-top:0px solid var(--line);transition:grid-template-rows .35s ease, border-top-width 0s .35s}
+  .accord.open .accord-body{grid-template-rows:1fr;border-top-width:1px;transition:grid-template-rows .35s ease, border-top-width 0s 0s}
+  .accord-inner{overflow:hidden}
+  .flow-stages{display:flex;flex-direction:column}
+  .flow-stage{display:grid;grid-template-columns:52px 1fr;border-top:1px solid var(--line)}
+  .flow-stage:first-child{border-top:none}
+  .flow-num{display:flex;flex-direction:column;align-items:center;padding:18px 0;border-right:1px solid var(--line);background:var(--bg-2);gap:4px}
+  .flow-num span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.06em}
+  .flow-num .arr{color:var(--line-2);font-size:13px;line-height:1}
+  .flow-stage:last-child .flow-num .arr{visibility:hidden}
+  .flow-body{padding:18px 22px}
+  .flow-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg-mute);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:3px}
+  .flow-name{font-weight:600;font-size:14px;color:var(--fg);margin-bottom:5px;letter-spacing:-0.01em}
+  .flow-desc{font-size:13px;color:var(--fg-dim);line-height:1.5}
+  .flow-branches{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+  @media(max-width:560px){.flow-branches{grid-template-columns:1fr}}
+  .flow-branch{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--panel)}
+  .flow-branch-name{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px}
+  .flow-branch-desc{font-size:12px;color:var(--fg-dim);line-height:1.4}
+  .flow-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  .flow-pill{padding:3px 8px;border:1px solid var(--line-2);border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg-dim)}
+
+  /* --- TOOLS GRID --- */
+  .tools-widget{margin-top:20px}
+  .tools-widget-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--fg-mute);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:14px}
+  .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .tools-cat{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--bg-2);transition:border-color .2s}
+  .tools-cat:hover{border-color:var(--line-2)}
+  .tools-cat-name{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
+  .tools-list{display:flex;flex-wrap:wrap;gap:5px}
+  .tools-tag{padding:3px 9px;border:1px solid var(--line);border-radius:999px;font-size:11px;color:var(--fg-dim);font-family:'JetBrains Mono',monospace}
+  .tools-tag small{color:var(--fg-mute);font-size:9px;margin-left:3px}
+
+  /* --- HOW IT'S BUILT DISCLOSURE --- */
+  .disclosure{
+    border-top:1px solid var(--line);padding:24px 0;background:var(--bg-2);
+  }
+  .disclosure .wrap{display:flex;align-items:baseline;gap:32px;flex-wrap:wrap}
+  .disc-label{
+    font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg-mute);
+    text-transform:uppercase;letter-spacing:0.16em;flex-shrink:0;
+  }
+  .disc-items{display:flex;gap:28px;flex-wrap:wrap}
+  .disc-item{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--fg-mute)}
+  .disc-item em{font-style:normal;color:var(--fg-dim);margin-right:6px}
 </style>
 </head>
 <body>
@@ -436,7 +497,7 @@
         </div>
         <div class="stat">
           <div class="k">Also</div>
-          <div class="v">Scouts chief <small>Non-formal learning, outdoors, leadership</small></div>
+          <div class="v">Business Relations Manager <small>@ Socrates Society · Strategic Partnerships, Stakeholder Management, Fundraising</small></div>
         </div>
       </div>
     </div>
@@ -520,6 +581,40 @@
               <div class="reading-title">The Six Disciplines of Strategic Thinking</div>
               <div class="reading-author">Michael D. Watkins</div>
               <div class="reading-note">Strategic thinking is a trainable skill built on pattern recognition: the ability to see what others miss, then act on it decisively.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tools-widget">
+          <div class="tools-widget-label">Tools I Master</div>
+          <div class="tools-grid">
+            <div class="tools-cat">
+              <div class="tools-cat-name">Analysis</div>
+              <div class="tools-list">
+                <span class="tools-tag">R <small>Panel Regression</small></span>
+                <span class="tools-tag">Excel <small>Financial Modeling</small></span>
+              </div>
+            </div>
+            <div class="tools-cat">
+              <div class="tools-cat-name">AI Leverage</div>
+              <div class="tools-list">
+                <span class="tools-tag">Claude Code</span>
+                <span class="tools-tag">Zapier AI</span>
+                <span class="tools-tag">Replit Agent</span>
+              </div>
+            </div>
+            <div class="tools-cat">
+              <div class="tools-cat-name">Finance</div>
+              <div class="tools-list">
+                <span class="tools-tag">REMS <small>AP Systems</small></span>
+                <span class="tools-tag">Reconciliation</span>
+              </div>
+            </div>
+            <div class="tools-cat">
+              <div class="tools-cat-name">Relations</div>
+              <div class="tools-list">
+                <span class="tools-tag">HubSpot</span>
+              </div>
             </div>
           </div>
         </div>
@@ -705,6 +800,104 @@
         </div>
       </div>
     </div>
+
+    <!-- AUTOMATION ACCORDION -->
+    <div class="accord reveal">
+      <button class="accord-trigger" aria-expanded="false">
+        <div class="accord-tl">
+          <span class="dot"></span>
+          <span>How the automation works</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+          <span class="accord-badge">6 stages · end-to-end</span>
+          <span class="accord-chevron">↓</span>
+        </div>
+      </button>
+      <div class="accord-body">
+        <div class="accord-inner">
+          <div class="flow-stages">
+
+            <div class="flow-stage">
+              <div class="flow-num"><span>01</span><span class="arr">↓</span></div>
+              <div class="flow-body">
+                <div class="flow-tag">Input · The Eyes</div>
+                <div class="flow-name">Student uploads a photo</div>
+                <div class="flow-desc">A photo of homework or a textbook page arrives via the Web Library or WhatsApp. No manual re-entry — the image is the trigger.</div>
+                <div class="flow-pills"><span class="flow-pill">WhatsApp API</span><span class="flow-pill">Web Library</span></div>
+              </div>
+            </div>
+
+            <div class="flow-stage">
+              <div class="flow-num"><span>02</span><span class="arr">↓</span></div>
+              <div class="flow-body">
+                <div class="flow-tag">Analysis · Vision &amp; OCR</div>
+                <div class="flow-name">The AI reads the image</div>
+                <div class="flow-desc">A vision model processes the pixels: text is extracted via OCR and the subject and level are identified automatically.</div>
+                <div class="flow-pills"><span class="flow-pill">GPT-4o Vision</span><span class="flow-pill">Gemini Pro Vision</span><span class="flow-pill">OCR</span></div>
+              </div>
+            </div>
+
+            <div class="flow-stage">
+              <div class="flow-num"><span>03</span><span class="arr">↓</span></div>
+              <div class="flow-body">
+                <div class="flow-tag">Transformation Layer</div>
+                <div class="flow-name">Four engines run in parallel</div>
+                <div class="flow-desc">The analyzed content fans out to four specialised engines simultaneously.</div>
+                <div class="flow-branches">
+                  <div class="flow-branch">
+                    <div class="flow-branch-name">Smart Summarizer</div>
+                    <div class="flow-branch-desc">Filters key points into a concise summary.</div>
+                  </div>
+                  <div class="flow-branch">
+                    <div class="flow-branch-name">Quiz Generator</div>
+                    <div class="flow-branch-desc">Creates multiple-choice questions from the text.</div>
+                  </div>
+                  <div class="flow-branch">
+                    <div class="flow-branch-name">Flashcard Engine</div>
+                    <div class="flow-branch-desc">Converts concepts into spaced-repetition flashcards.</div>
+                  </div>
+                  <div class="flow-branch">
+                    <div class="flow-branch-name">AI Buddy</div>
+                    <div class="flow-branch-desc">Loads the content as context for the Socratic chatbot.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flow-stage">
+              <div class="flow-num"><span>04</span><span class="arr">↓</span></div>
+              <div class="flow-body">
+                <div class="flow-tag">Gamification · The Hook</div>
+                <div class="flow-name">Survival Mode keeps students engaged</div>
+                <div class="flow-desc">Wrong answers cost lives; correct streaks build momentum. Practice feels earned, not forced.</div>
+                <div class="flow-pills"><span class="flow-pill">❤ Lives</span><span class="flow-pill">🔥 Streaks</span><span class="flow-pill">Survival Mode</span></div>
+              </div>
+            </div>
+
+            <div class="flow-stage">
+              <div class="flow-num"><span>05</span><span class="arr">↓</span></div>
+              <div class="flow-body">
+                <div class="flow-tag">Retention · Socratic Method</div>
+                <div class="flow-name">The AI Buddy guides, never just tells</div>
+                <div class="flow-desc">When a student gets stuck, the AI Buddy asks targeted questions that lead them to the answer themselves — no spoon-feeding.</div>
+              </div>
+            </div>
+
+            <div class="flow-stage">
+              <div class="flow-num"><span>06</span><span class="arr">↓</span></div>
+              <div class="flow-body">
+                <div class="flow-tag">Distribution · Accessible Everywhere</div>
+                <div class="flow-name">The full chain lives in your pocket</div>
+                <div class="flow-desc">A message to the WhatsApp Business number triggers the entire pipeline within milliseconds. No app to download, no account to create.</div>
+                <div class="flow-pills"><span class="flow-pill">WhatsApp API</span><span class="flow-pill">&lt;500ms response</span><span class="flow-pill">Zero friction</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -778,6 +971,17 @@
   </div>
 </section>
 
+<div class="disclosure">
+  <div class="wrap">
+    <span class="disc-label">How it's built</span>
+    <div class="disc-items">
+      <span class="disc-item"><em>Development</em>AI-Assisted · Claude Code · Replit · VS Code</span>
+      <span class="disc-item"><em>Infrastructure</em>GitHub Actions · DNS management</span>
+      <span class="disc-item"><em>Architecture</em>HTML / CSS / JS</span>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <span>© 2026 Maximiliaan Dahmen</span>
@@ -792,6 +996,15 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:0.08});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Accordion toggle
+  document.querySelectorAll('.accord-trigger').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const accord = btn.closest('.accord');
+      const open = accord.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
 
   // Smooth anchor scroll
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
