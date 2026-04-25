@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Select-String -Path \"C:\\\\Users\\\\MaxDa\\\\Downloads\\\\MyWebsite\\\\index.html\" -Pattern \"auto-flow|tools-widget|stack-block|Business Relations Manager|font-weight:600\")",
+      "Bash(Measure-Object)",
+      "Bash(Select-Object -ExpandProperty Count)"
+    ]
+  }
+}
