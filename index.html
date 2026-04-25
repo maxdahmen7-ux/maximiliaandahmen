@@ -356,55 +356,6 @@
   /* entrance */
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .8s ease, transform .8s ease}
   .reveal.in{opacity:1;transform:none}
-
-  /* --- TYPOGRAPHY CONTRAST --- */
-  .sec-title{font-weight:600}
-  .exp-desc{color:var(--fg-mute)}
-  .bijles-tag{color:var(--fg-mute)}
-  .about-copy p.faded{color:var(--fg-mute)}
-  .anchor-sub{color:var(--fg-mute)}
-  .contact-sub{color:var(--fg-mute)}
-
-  /* --- HOW IT'S BUILT (stack groups in aside) --- */
-  .stack-block{margin-top:4px;display:flex;flex-direction:column;gap:10px}
-  .stack-row{display:flex;flex-direction:column;gap:2px}
-  .stack-cat{font-size:10px;color:var(--fg-mute);text-transform:uppercase;letter-spacing:0.12em;font-family:'JetBrains Mono',monospace}
-  .stack-val{font-size:13px;color:var(--fg);font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0}
-
-  /* --- TOOLS GRID --- */
-  .tools-widget{margin-top:20px}
-  .tools-widget-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--fg-mute);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:14px}
-  .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .tools-cat{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--bg-2);transition:border-color .2s}
-  .tools-cat:hover{border-color:var(--line-2)}
-  .tools-cat-name{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
-  .tools-list{display:flex;flex-wrap:wrap;gap:5px}
-  .tools-tag{padding:3px 9px;border:1px solid var(--line);border-radius:999px;font-size:11px;color:var(--fg-dim);font-family:'JetBrains Mono',monospace}
-  .tools-tag small{color:var(--fg-mute);font-size:9px;margin-left:3px}
-
-  /* --- AUTOMATION FLOW --- */
-  .auto-flow{margin-top:48px;border:1px solid var(--line);border-radius:20px;overflow:hidden}
-  .auto-flow-head{padding:20px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--bg-2)}
-  .auto-flow-head-title{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--fg-dim);text-transform:uppercase;letter-spacing:0.14em}
-  .auto-flow-head-badge{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);background:rgba(var(--accent),0.08);border:1px solid currentColor;padding:3px 8px;border-radius:999px;opacity:0.8}
-  .auto-stages{display:flex;flex-direction:column}
-  .auto-stage{display:grid;grid-template-columns:56px 1fr;border-bottom:1px solid var(--line)}
-  .auto-stage:last-child{border-bottom:none}
-  .auto-stage-num{display:flex;flex-direction:column;align-items:center;padding:20px 0;border-right:1px solid var(--line);background:var(--bg-2);gap:0}
-  .auto-stage-num span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.06em}
-  .auto-stage-num .arrow{color:var(--line-2);font-size:16px;margin-top:6px;line-height:1}
-  .auto-stage:last-child .auto-stage-num .arrow{display:none}
-  .auto-stage-body{padding:20px 24px}
-  .auto-stage-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg-mute);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:4px}
-  .auto-stage-title{font-weight:600;font-size:14px;color:var(--fg);margin-bottom:6px;letter-spacing:-0.01em}
-  .auto-stage-desc{font-size:13px;color:var(--fg-dim);line-height:1.5}
-  .auto-branches{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px}
-  @media(max-width:640px){.auto-branches{grid-template-columns:1fr}}
-  .auto-branch{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--panel)}
-  .auto-branch-name{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px}
-  .auto-branch-desc{font-size:12px;color:var(--fg-dim);line-height:1.4}
-  .auto-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
-  .auto-pill{padding:3px 8px;border:1px solid var(--line-2);border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg-dim)}
 </style>
 </head>
 <body>
@@ -485,7 +436,7 @@
         </div>
         <div class="stat">
           <div class="k">Also</div>
-          <div class="v">Business Relations Manager <small>@ Socrates Society · Strategic Partnerships, Stakeholder Management, Fundraising</small></div>
+          <div class="v">Scouts chief <small>Non-formal learning, outdoors, leadership</small></div>
         </div>
       </div>
     </div>
@@ -513,23 +464,7 @@
           <dt>Age</dt><dd>20</dd>
           <dt>Studying</dt><dd>International Business Administration</dd>
           <dt>Languages</dt><dd>Dutch · English (C1) · Mandarin (A1)</dd>
-          <dt>How it's built</dt>
-          <dd>
-            <div class="stack-block">
-              <div class="stack-row">
-                <span class="stack-cat">Development</span>
-                <span class="stack-val">AI-Assisted · Claude Code · Replit · VS Code</span>
-              </div>
-              <div class="stack-row">
-                <span class="stack-cat">Infrastructure</span>
-                <span class="stack-val">GitHub Actions · DNS management</span>
-              </div>
-              <div class="stack-row">
-                <span class="stack-cat">Architecture</span>
-                <span class="stack-val">Clean HTML / CSS / JS synthesis</span>
-              </div>
-            </div>
-          </dd>
+          <dt>Stack</dt><dd>AI tooling · Excel · R · Zapier</dd>
         </dl>
       </aside>
       <div class="about-copy reveal">
@@ -585,40 +520,6 @@
               <div class="reading-title">The Six Disciplines of Strategic Thinking</div>
               <div class="reading-author">Michael D. Watkins</div>
               <div class="reading-note">Strategic thinking is a trainable skill built on pattern recognition: the ability to see what others miss, then act on it decisively.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tools-widget">
-          <div class="tools-widget-label">Tools I Master</div>
-          <div class="tools-grid">
-            <div class="tools-cat">
-              <div class="tools-cat-name">Analysis</div>
-              <div class="tools-list">
-                <span class="tools-tag">R <small>Panel Regression</small></span>
-                <span class="tools-tag">Excel <small>Financial Modeling</small></span>
-              </div>
-            </div>
-            <div class="tools-cat">
-              <div class="tools-cat-name">AI Leverage</div>
-              <div class="tools-list">
-                <span class="tools-tag">Claude Code</span>
-                <span class="tools-tag">Zapier AI</span>
-                <span class="tools-tag">Replit Agent</span>
-              </div>
-            </div>
-            <div class="tools-cat">
-              <div class="tools-cat-name">Finance</div>
-              <div class="tools-list">
-                <span class="tools-tag">REMS <small>AP Systems</small></span>
-                <span class="tools-tag">Reconciliation</span>
-              </div>
-            </div>
-            <div class="tools-cat">
-              <div class="tools-cat-name">Relations</div>
-              <div class="tools-list">
-                <span class="tools-tag">HubSpot</span>
-              </div>
             </div>
           </div>
         </div>
@@ -804,109 +705,6 @@
         </div>
       </div>
     </div>
-
-    <!-- AUTOMATION FLOW -->
-    <div class="auto-flow reveal">
-      <div class="auto-flow-head">
-        <span class="auto-flow-head-title">How the automation works</span>
-        <span class="auto-flow-head-badge">6 stages · end-to-end</span>
-      </div>
-      <div class="auto-stages">
-
-        <div class="auto-stage">
-          <div class="auto-stage-num"><span>01</span><span class="arrow">↓</span></div>
-          <div class="auto-stage-body">
-            <div class="auto-stage-label">Input · The Eyes</div>
-            <div class="auto-stage-title">Student uploads a photo</div>
-            <div class="auto-stage-desc">A photo of homework or a textbook page arrives via the Web Library or WhatsApp. No manual re-entry — the image is the trigger.</div>
-            <div class="auto-pills">
-              <span class="auto-pill">WhatsApp API</span>
-              <span class="auto-pill">Web Library</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="auto-stage">
-          <div class="auto-stage-num"><span>02</span><span class="arrow">↓</span></div>
-          <div class="auto-stage-body">
-            <div class="auto-stage-label">Analysis · Vision &amp; OCR</div>
-            <div class="auto-stage-title">The AI reads the image</div>
-            <div class="auto-stage-desc">As the image hits the Replit server, a vision model processes the pixels: text is extracted via OCR and the subject and level are identified automatically.</div>
-            <div class="auto-pills">
-              <span class="auto-pill">GPT-4o Vision</span>
-              <span class="auto-pill">Gemini Pro Vision</span>
-              <span class="auto-pill">OCR</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="auto-stage">
-          <div class="auto-stage-num"><span>03</span><span class="arrow">↓</span></div>
-          <div class="auto-stage-body">
-            <div class="auto-stage-label">Transformation Layer</div>
-            <div class="auto-stage-title">Four engines run in parallel</div>
-            <div class="auto-stage-desc">The analyzed content fans out to four specialised engines simultaneously.</div>
-            <div class="auto-branches">
-              <div class="auto-branch">
-                <div class="auto-branch-name">Smart Summarizer</div>
-                <div class="auto-branch-desc">Filters key points into a concise, structured summary.</div>
-              </div>
-              <div class="auto-branch">
-                <div class="auto-branch-name">Quiz Generator</div>
-                <div class="auto-branch-desc">Creates multiple-choice questions from the source text.</div>
-              </div>
-              <div class="auto-branch">
-                <div class="auto-branch-name">Flashcard Engine</div>
-                <div class="auto-branch-desc">Converts concepts into flashcards optimised for long-term retention.</div>
-              </div>
-              <div class="auto-branch">
-                <div class="auto-branch-name">AI Buddy</div>
-                <div class="auto-branch-desc">Loads the content as context for the Socratic chatbot.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="auto-stage">
-          <div class="auto-stage-num"><span>04</span><span class="arrow">↓</span></div>
-          <div class="auto-stage-body">
-            <div class="auto-stage-label">Gamification · The Hook</div>
-            <div class="auto-stage-title">Survival Mode keeps students engaged</div>
-            <div class="auto-stage-desc">Content is delivered inside a game loop. Wrong answers cost lives; correct streaks build momentum. The format makes practice feel earned, not forced.</div>
-            <div class="auto-pills">
-              <span class="auto-pill">❤ Lives</span>
-              <span class="auto-pill">🔥 Streaks</span>
-              <span class="auto-pill">Survival Mode</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="auto-stage">
-          <div class="auto-stage-num"><span>05</span><span class="arrow">↓</span></div>
-          <div class="auto-stage-body">
-            <div class="auto-stage-label">Retention · Socratic Method</div>
-            <div class="auto-stage-title">The AI Buddy guides, never just tells</div>
-            <div class="auto-stage-desc">When a student gets stuck, the AI Buddy intervenes. Because it already knows the photo context, it asks targeted questions that lead the student to the answer themselves — no spoon-feeding.</div>
-          </div>
-        </div>
-
-        <div class="auto-stage">
-          <div class="auto-stage-num"><span>06</span></div>
-          <div class="auto-stage-body">
-            <div class="auto-stage-label">Distribution · Accessible Everywhere</div>
-            <div class="auto-stage-title">The full chain lives in your pocket</div>
-            <div class="auto-stage-desc">A message to the WhatsApp Business number triggers the entire pipeline within milliseconds. No app to download, no account to create.</div>
-            <div class="auto-pills">
-              <span class="auto-pill">WhatsApp API</span>
-              <span class="auto-pill">&lt; 500ms response</span>
-              <span class="auto-pill">Zero friction</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
   </div>
 </section>
 
