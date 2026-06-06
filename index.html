@@ -242,6 +242,17 @@
     content:"● ";color:var(--accent);margin-right:4px;
     animation:pulse 2s ease-in-out infinite;display:inline-block;
   }
+  .exp.upcoming .exp-date{color:var(--gold)}
+  .exp.upcoming .exp-date::before{
+    content:"▸ ";color:var(--gold);margin-right:2px;display:inline-block;
+  }
+  .exp-cert{
+    display:inline-flex;align-items:center;gap:6px;margin-top:10px;
+    padding:4px 10px;border:1px solid var(--line-2);border-radius:999px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg-mute);
+    text-transform:uppercase;letter-spacing:0.1em;
+  }
+  .exp-cert::before{content:"✦";color:var(--gold);font-size:9px}
 
   /* --- CONTACT --- */
   section.contact{
@@ -912,8 +923,8 @@
 
       <div class="exp current">
         <div class="exp-date">2023 — Present</div>
-        <div class="exp-role">Rotterdam School of Management<em>Year 3 · BSc International Business Administration</em></div>
-        <div class="exp-desc">Top 10% of cohort, GPA 8.4/10 with a Top Performer award in Accounting. Coursework concentrated in corporate finance, strategy, and methods & research in R.</div>
+        <div class="exp-role">Rotterdam School of Management<em>BSc International Business Administration</em></div>
+        <div class="exp-desc">Top 10% of cohort, GPA 8.4/10 with a Top Performer award in Accounting. Coursework concentrated in corporate finance, strategy, and methods &amp; research in R. <strong>Bachelor thesis completed</strong> — investigating AI vs. human expert trust dynamics in high-stakes consumer decisions (2×2 experiment, N=102); found that human expert framing drives confidence but not deeper cognitive engagement.</div>
       </div>
 
       <div class="exp current">
@@ -926,6 +937,26 @@
         <div class="exp-date">2025 — Present</div>
         <div class="exp-role">Socrates Nederland<em>Business Relations Manager · 200+ member society</em></div>
         <div class="exp-desc">Lead external relations for the business society. Source and close corporate sponsorships (€500–€2,000/partner), manage a pipeline of <span class="metric-inline">15+ RELATIONSHIPS</span>, and organise networking events connecting RSM to Dutch business.</div>
+      </div>
+
+      <div class="exp upcoming">
+        <div class="exp-date">2025 · Upcoming</div>
+        <div class="exp-role">Erasmus+ · Economy Essentials<em>Participant · Kraków, Poland</em></div>
+        <div class="exp-desc">7-day fully funded international training on economics, finance, and critical thinking for youth workers. Goal: build practical financial literacy competencies and pass them on to young people in non-formal settings.</div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-date">2025</div>
+        <div class="exp-role">Erasmus+ · How to Talk About War<em>Participant · Kemer, Türkiye</em></div>
+        <div class="exp-desc">International training course on conflict communication for youth workers and educators. Applied Nonviolent Communication (NVC), trauma-sensitive dialogue, and consensus-seeking methodology across <span class="metric-inline">10+ NATIONAL DELEGATIONS</span>. Brought these frameworks back into Bijlesmaatje and academic practice.</div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-date">2025</div>
+        <div class="exp-role">JPMorgan Chase &amp; Co.<em>Investment Banking Job Simulation · Forage</em></div>
+        <div class="exp-desc">Identified an M&amp;A target based on strategic and financial criteria. Built a DCF valuation model, adjusting for a competitor bid and supply chain disruption. Delivered a client-ready 2-pager with company profile and auction process summary.
+          <span class="exp-cert">Certificate issued</span>
+        </div>
       </div>
 
       <div class="exp">
