@@ -338,6 +338,9 @@ h1.name .accent-mark{color:var(--coral);font-style:italic}
   text-transform:uppercase;letter-spacing:0.12em;margin-bottom:24px;font-weight:600;
 }
 .bijles-status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2.4s ease-in-out infinite}
+/* Wound-down venture: muted, no live pulse */
+.bijles-status.closed{background:rgba(42,37,33,0.05);border-color:var(--line-2);color:var(--ink-dim)}
+.bijles-status.closed::before{background:var(--ink-mute);animation:none;box-shadow:none}
 .bijles-logo{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(46px,5.6vw,78px);line-height:0.98;letter-spacing:-0.03em;margin-bottom:20px;color:var(--ink)}
 .bijles-logo .tld{color:var(--coral);font-style:italic}
 .bijles-tag{font-size:18px;color:var(--ink-dim);margin-bottom:30px;max-width:490px;line-height:1.6}
